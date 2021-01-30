@@ -21,6 +21,7 @@ function calculateAmount(id, isAdd) {
     const inputData = document.getElementById(id)
     const inputValue = parseInt(inputData.value);
  
+    //Input Value
     if (isAdd == false && inputValue > 0) {
         inputData.value = inputValue - 1;
     }else if (isAdd){
