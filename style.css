@@ -10,9 +10,9 @@
     background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("images/bg.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
-    height:100vh;
+    height:110vh;
   }
   
   nav {
