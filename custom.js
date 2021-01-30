@@ -16,22 +16,22 @@ document.getElementById("economy-decrease").addEventListener("click", function()
 })
 
 
+//Handling increment or decrement value
 function calculateAmount(id, isAdd) {
     const inputData = document.getElementById(id)
     const inputValue = parseInt(inputData.value);
-    
-    // increment or decrement value 
+ 
     if (isAdd == false && inputValue > 0) {
         inputData.value = inputValue - 1;
     }else if (isAdd){
         inputData.value = inputValue + 1;  
     }
 
-    calculateTotalPrice();
+    grandTotalPrice();
 }
 
 
-function calculateTotalPrice() { 
+function grandTotalPrice() { 
     // Cost of tickets via 'thePrice' function
     const firstClassTicketCost = thePrice('first-class');
     const economyClassTicketCost = thePrice('economy-class');
@@ -69,3 +69,18 @@ function thePrice(id) {
         return economyClassTicketPrice * totalNumberOfTickets;
     }
 }
+
+
+//Custom Area Successful Confirmation Output
+function successArea(){
+    const submitArea = document.getElementById("bookNow").addEventListener("click", function(){
+        const submitArea = document.getElementById("submit-area");
+        bookSection.style.display = "none";
+    
+       const customSection = document.getElementById("custom-section");
+       customSection.style.display = "block";
+    })   
+}
+successArea();
+
+
